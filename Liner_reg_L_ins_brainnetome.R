@@ -13,11 +13,10 @@
 library(readxl)
 library(ggplot2)
 library(lme4)
-library(MuMIn)
-library(Rmisc)
+library(lmerTest) #To get p values must use lmerTgiest as it uses Satterthwaite's method to approximate them. lme4 does not support this.
 
 
-df <- read.csv ("beta_caarms_data.csv") 
+df <- read.csv ("beta_caarms_data_COPY.csv") 
 
 head(df)
 
@@ -193,6 +192,7 @@ outputb <- lmer(pos_1m_21~ drug*L_insula + (id |valence), data=df)
 summary(outputb)
 confint(outputb,method="Wald")
 r.squaredGLMM(outputb)
+
 
 outputn <- lmer(neg_1m_21~ drug*L_insula + (id |valence), data=df)
 summary(outputn)
