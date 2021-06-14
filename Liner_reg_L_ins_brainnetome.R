@@ -14,7 +14,7 @@ library(readxl)
 library(ggplot2)
 library(lme4)
 library(lmerTest) #To get p values must use lmerTest as it uses Satterthwaite's method to approximate them. lme4 does not support this.
-
+library(MuMIn)
 
 df <- read.csv ("beta_caarms_data_COPY.csv") 
 
