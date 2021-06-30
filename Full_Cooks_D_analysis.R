@@ -1,4 +1,4 @@
-#Easy script for Cooks D outlier analysis
+#Easy script for Cooks D outlier analysis: Allows identification of outliers via a plot. Also creates a new data frame for easy re-analysis without the outliers.
 #https://stats.stackexchange.com/questions/164099/removing-outliers-based-on-cooks-distance-in-r-language 
 #NOTE: Only lines 5 to 17 are of real interest. 20 onwards are more application examples
 
