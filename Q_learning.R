@@ -8,10 +8,10 @@ output <- pst_gainloss_Q( data = df, niter = 2000, nwarmup = 1000, nchain = 4, n
 # Visually check convergence of the sampling chains (should look like 'hairy caterpillars')
 plot(output, type = "trace")
 
-# Check Rhat values (all Rhat values should be less than or equal to 1.1)
+# Check Rhat values (all Rhat values should be less than or equal to 1.1) -- convergence
 rhat(output)
 
-# Plot the posterior distributions of the hyper-parameters (distributions should be unimodal)
+# Plot the posterior distributions of the hyper-parameters (distributions should be unimodal) -- learning rate
 plot(output)
 
 # Show the WAIC and LOOIC model fit estimates
